@@ -3,8 +3,6 @@ Se necesita crear una función que permita
 con la estructura dada, generar un diccionario clave el numero identidad del estudiante
 nombres con apellido, promedio y especificar si el estudiante esta matriculado o no
 
-Curso 96 - Fernando Reyes
-
 """
 
 estudiantes = {
@@ -42,45 +40,22 @@ Salida:
         nombres: "JULIO CESAR MORA DIAZ"
         promedio: 4.24,
         matriculado: "Si",
-        aprobado. "Si"
+        aprobado: "Si"
     }
 }
 """
-# diccionario[key]
-"""for estudiante in estudiantes:
-    notas = estudiantes[estudiante]["notas"]
-    suma = 0
-    for nota in notas:
-        suma += nota
-    promedio = suma/len(notas)
-    suma = 0
-    print(promedio)
-"""
-def promedios(dic):
-    est_salida = dict()
-    for estudiante in dic:
-        upperNombres = dic[estudiante]["nombres"].upper()
-        upperApellidos = dic[estudiante]["apellidos"].upper()
-        suma = sum(dic[estudiante]["notas"]) 
-        promedio = suma/len("notas")
-        nombresConcatenados = f"{upperNombres} {upperApellidos}"
-        estadoMatricula = dic[estudiante]["matriculado"]        
-        if estadoMatricula == False:
-            matr = "NO"
-        else:
-            matr = "SI"
-        if promedio >= 3.0:
-            apr = "SI"
-        else:
-            apr = "NO"
-        est_salida[estudiante] = {
-            "nombres": nombresConcatenados,
-            "promedio": promedio,
-            "matriculado": matr,
-            "aprobado": apr
-            } 
-    return est_salida
 
-resultados = promedios(estudiantes)
+def promedio_nota(est):
+    prom = dict()
+    for estudiante in est:
+        notas = est[estudiante]["notas"]            
+        promedio = sum(notas) / len(notas)
+        prom[estudiante]={
+            'promedio': promedio
+        }
+    
+    return prom
 
-print(resultados)
+
+print(promedio_nota(estudiantes))            
+
