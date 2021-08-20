@@ -55,4 +55,5 @@ El requerimiento es realizar una función que retorne un diccionario con clave e
                 'remuneracion': 1142000,
                 'referencia': SM71856789
        }
+       pago_total: 2046000
     }
