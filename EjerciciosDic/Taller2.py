@@ -45,17 +45,31 @@ Salida:
 }
 """
 
+
 def promedio_nota(est):
     prom = dict()
     for estudiante in est:
-        notas = est[estudiante]["notas"]            
+        notas = est[estudiante]["notas"]
+        nombre = est[estudiante]["nombres"].upper() +" " + est[estudiante]["apellidos"].upper()                    
         promedio = sum(notas) / len(notas)
+
+        if est[estudiante]["matriculado"]:
+            matricula = "Si"
+        else:
+            matricula = "No"
+
+        if promedio >= 3.0:
+            aprobado = "Si"
+        else:
+            aprobado = "No"
+
         prom[estudiante]={
-            'promedio': promedio
+            'nombres': nombre,
+            'promedio': promedio,
+            'matriculado': matricula,
+            'aprobado': aprobado
         }
     
     return prom
-
-
-print(promedio_nota(estudiantes))            
-
+         
+print(promedio_nota(estudiantes))
