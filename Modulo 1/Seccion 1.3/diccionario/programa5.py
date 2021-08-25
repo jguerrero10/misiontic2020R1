@@ -1,3 +1,8 @@
+""" 
+Programa de encriptacion/ desencriptacion
+Codigo Murcielago
+"""
+
 claves = {
     'm': 0,
     'u': 1,

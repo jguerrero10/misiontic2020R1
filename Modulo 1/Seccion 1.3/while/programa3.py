@@ -1,3 +1,6 @@
+""" 
+Programa: Juego adivinar un numero
+"""
 import random
 
 num_secreto = random.randint(1, 10)
