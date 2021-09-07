@@ -111,10 +111,6 @@ serie.describe()
 # In[36]:
 
 
-des['mean']
-
-
-# In[ ]:
 
 
 
