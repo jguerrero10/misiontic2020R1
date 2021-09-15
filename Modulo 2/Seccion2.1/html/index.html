@@ -8,6 +8,7 @@
         <!-- Etiquetas opcionales -->
         <meta http-equiv="refresh" content="30">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <title>Biblioteca | Página principal</title>   
     </head>
     <body>        
@@ -24,7 +25,57 @@
             </ul>
         </nav>        
         <section>
-            <p>Contenido Principal</p>
+            <table style="border: 1px solid black;">
+                <colgroup>
+                    <col span="1" style="background-color: aqua;">
+                    <col span="1">
+                    <col span="1" style="background-color: red;">                    
+                    <col span="1" style="background-color: chartreuse;">
+                </colgroup>
+                <tr>
+                    <th style="border: 1px solid black;">Columna 1</th>
+                    <th style="border: 1px solid black;">Columna 2</th>
+                    <th style="border: 1px solid black;">Columna 3</th>
+                    <th style="border: 1px solid black;">Columna 4</th>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: blueviolet;">C1</td>
+                    <td style="border: 1px solid black; text-align: center;">C2</td>
+                    <td style="border: 1px solid black; text-align: center;">C3</td>
+                    <td style="border: 1px solid black; text-align: center;">C4</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; text-align: center;">C5</td>
+                    <td style="border: 1px solid black; text-align: center;">C6</td>
+                    <td style="border: 1px solid black; text-align: center;">C7</td>
+                    <td style="border: 1px solid black; text-align: center;">C8</td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <h4>Formulario</h4>
+            <form action="" method="">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" minlength="2" maxlength="30" placeholder="Escriba el nombre" required>
+                <label for="apellido">Apellidos:</label>
+                <input type="text" id="apellido" maxlength="60" required>
+                <label for="M">Masculino:</label>
+                <input type="radio" id="M" name="sexo" value="M">
+                <label for="F">Femenino:</label>
+                <input type="radio" id="F" value="F" name="sexo">
+                <label for="bici">Bicicleta</label>
+                <input type="checkbox" id="bici" value="b">
+                <label for="moto">Moto</label>
+                <input type="checkbox" id="moto" value="m">
+                <label for="carro">Carro</label>
+                <input type="checkbox" id="carro" value="c">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" min="18">
+                <input type="submit" value="Enviar Datos">
+
+            </form>
+
         </section>
         <footer>
             2021 - Derechos reservados
