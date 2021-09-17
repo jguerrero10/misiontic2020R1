@@ -1,0 +1,32 @@
+table, td, th{
+    border: 1px solid black;
+}
+table{
+    width: 70%;    
+}
+th{
+    font-family: Impact;
+    font-size: 12px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+body{
+    font-family: verdana;
+    background: linear-gradient(to top, rgb(8, 121, 78), white);    
+}
+
+header{
+    background-image: url("img/img.jpg");
+    background-position: center;
+    font-size: 14px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    /* */
+}
+
+.cabecera{
+    font-size: 14px;
+}
