@@ -1,32 +1,105 @@
-table, td, th{
-    border: 1px solid black;
-}
-table{
-    width: 70%;    
-}
-th{
-    font-family: Impact;
-    font-size: 12px;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-body{
-    font-family: verdana;
-    background: linear-gradient(to top, rgb(8, 121, 78), white);    
+*{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 100;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-header{
-    background-image: url("img/img.jpg");
-    background-position: center;
-    font-size: 14px;
-    text-align: center;
-    border: 3px solid black;
-    border-radius: 10px;
-    color: white;
-    -webkit-text-stroke: 1px black;
-    /* */
+body
+{
+  background-color: #770303;
+  padding: 20px;
 }
 
-.cabecera{
-    font-size: 14px;
+header, nav, section, aside, footer
+{
+  text-align: center;
+  background-color: #eeb0b0;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+header,
+nav,
+footer
+{
+  width: 100%;
+  padding: 10px;
+}
+
+header
+{
+  margin-bottom: 20px;
+}
+
+h1
+{
+  margin: 0;
+}
+
+
+
+nav > li {
+    float: left;
+}
+
+
+section
+{
+  float: right;
+  width: 70%;
+  margin: 20px;
+}
+
+section header,
+section article,
+section footer
+{
+  width: 100%;
+  background-color: #eeb0b0;
+  border-radius: 5px;
+  margin: 0;
+  padding: 20px;
+}
+
+section article
+{
+  margin: 20px 0;
+}
+
+nav
+{
+  float: left;
+}
+
+aside
+{
+  float: left;
+  width: 20%;
+  margin: 20px;
+}
+
+nav ul
+{
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+nav li
+{
+  display: inline-block;
+  margin: 0 0 0 20px;
+  width: 100px;
+}
+
+nav li:first-child
+{
+  margin-left: 0;
+}
+
+footer
+{
+  clear: both;
 }
