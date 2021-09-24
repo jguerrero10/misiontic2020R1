@@ -12,7 +12,29 @@ body
   padding: 20px;
 }
 
-header, nav, section, aside, footer
+.nav-enlaces{
+  text-decoration:none; 
+  font-size:14px;
+}
+
+nav li{
+  display:inline-block;
+  width:10%;
+  padding:5px 10px;
+  background-color:#a04f4f;
+  border:1px solid #000;
+  text-align:center;  
+}
+
+nav li:hover{
+  background-color:#770303;  
+  }
+
+nav{
+  text-align: center;
+}
+
+header, section, aside, footer
 {
   text-align: center;
   background-color: #eeb0b0;
@@ -38,13 +60,6 @@ h1
   margin: 0;
 }
 
-
-
-nav > li {
-    float: left;
-}
-
-
 section
 {
   float: right;
@@ -68,11 +83,6 @@ section article
   margin: 20px 0;
 }
 
-nav
-{
-  float: left;
-}
-
 aside
 {
   float: left;
@@ -80,24 +90,6 @@ aside
   margin: 20px;
 }
 
-nav ul
-{
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 0;
-}
-
-nav li
-{
-  display: inline-block;
-  margin: 0 0 0 20px;
-  width: 100px;
-}
-
-nav li:first-child
-{
-  margin-left: 0;
-}
 
 footer
 {
