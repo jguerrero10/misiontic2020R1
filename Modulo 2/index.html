@@ -13,18 +13,32 @@
                          
     </head>
     <body>        
-        <header class="cabecera">            
-            <h1>Biblioteca Personal</h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a class="nav-enlaces" href="">Inicio</a></li>
-                <li><a class="nav-enlaces" href="">Gestión</a></li>
-                <li><a class="nav-enlaces" href="">Libros</a></li>
-                <li><a class="nav-enlaces" href="">informes</a> </li>
-                <li><a class="nav-enlaces" href="">Acceso Usuario</a></li>
-            </ul>
-        </nav> 
+        <header class="cabecera">
+            <div class="logo">
+                <h1 class="titulo">Biblioteca Personal</h1>
+                <!-- Add titulo-->
+                <span class="eslogan">Manejo de Libros</span>
+                <!-- Cambios Nav en Header-->
+            </div>
+            <!-- start nav -->
+     
+            <nav>
+                <ul>
+                    <li><a class="nav-enlaces" href="">Inicio</a></li>
+                    <li><a class="nav-enlaces" href="">Gestión</a></li>
+                    <ul class="dropdown-content">
+                        <li><a href="">Listar Libro</a></li>
+                        <li><a href="">Agregar libro</a></li>
+                        <li><a href="">Editar Libro</a></li>
+                        <li><a href="">Eliminar Libro</a></li>
+                    </ul>
+                    <li><a class="nav-enlaces" href="">Libros</a></li>
+                    <li><a class="nav-enlaces" href="">informes</a> </li>
+                    <li><a class="nav-enlaces" href="">Acceso Usuario</a></li>
+                </ul>
+            </nav> 
+           
+        </header>        
         <aside>
             <p>Barra Lateral</p>
         </aside>       
