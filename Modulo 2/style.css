@@ -1,6 +1,6 @@
 *{
   color: #fff;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 100;
   box-sizing: border-box;
   font-family: sans-serif;
@@ -8,19 +8,19 @@
 
 body
 {  
-  padding: 20px;
+  padding: 0.313em;
   background-color: #7C7C7C;
 }
 
 .nav-enlaces{
   text-decoration:none; 
-  font-size:14px;
+  font-size:0.875em;
 }
 
 nav li{
   display:inline-block;
   width:10%;
-  padding:5px 10px;
+  padding:0.313em 0.625em;
   background-color:#D64933;
   text-align:center;  
 }
@@ -43,43 +43,24 @@ nav ul ul {
 
 nav ul ul li {
   float:none;
-  width:150px
+  width: 9.375em
 }
 
 nav ul ul a {
   line-height:120%;
-  padding:10px 15px;
+  padding:0.625em 0.938em;
 }
 
 nav ul li:hover > ul {
   display:block;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 header, section, aside, footer
 {
   text-align: center;
   
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 0.313em;
+  padding: 1.25em;
 }
 
 header,
@@ -87,19 +68,19 @@ nav,
 footer
 {
   width: 100%;
-  padding: 10px;
+  padding: 0.625em;
 }
 
-header
+.cabecera
 {
-  margin-bottom: 20px;
-  height: 80px;   /* add*/
+  margin-bottom: 1.25em;
+  height: 5em;   /* add*/
   background-color: #000;
 }
 /* Se agrega stilo titulo*/
 .logo{
   float: left;
-	padding: 15px 0 0 20px;
+	padding: 0.938em 0 0 1.25em;
 	text-decoration: none;
 }
 .logo .titulo {
@@ -120,7 +101,8 @@ section
 {
   float: right;
   width: 70%;
-  margin: 20px;
+  margin: 0.313em;
+  background-color: #b3a8a8;
 }
 
 section header,
@@ -128,8 +110,6 @@ section article,
 section footer
 {
   width: 100%;
-  background-color: #eeb0b0;
-  border-radius: 5px;
   margin: 0;
   padding: 20px;
 }
@@ -143,11 +123,37 @@ aside
 {
   float: left;
   width: 20%;
-  margin: 20px;
+  margin: 0.313em;
+  background-color: #b3a8a8
+  ;
 }
 
 
 footer
 {
   clear: both;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+th, td{
+  padding: 0.5em;
+}
+
+tr:hover {background-color: #92DCE5;
+          color: white;}
+
+th {
+  background-color: #D64933;
+  color: white;
+}
+td{
+  color: black;
+}
+
+.tcontenido{
+  font-weight: bold;
 }

@@ -8,55 +8,113 @@
         <!-- Etiquetas opcionales -->        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">      
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
-        <title>Biblioteca | Página principal</title>
-                         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <title>Biblioteca | Página principal</title>                         
     </head>
     <body>        
-        <header class="cabecera">
-            <div class="logo">
-                <h1 class="titulo">Biblioteca Personal</h1>
-                <!-- Add titulo-->
-                <span class="eslogan">Manejo de Libros</span>
-                <!-- Cambios Nav en Header-->
-            </div>
-            <!-- start nav -->
-     
-            <nav>
-                <ul>
-                    <li><a class="nav-enlaces" href="">Inicio</a></li>
-                    <li><a class="nav-enlaces" href="">Gestión</a></li>
-                    <ul class="dropdown-content">
-                        <li><a href="">Listar Libro</a></li>
-                        <li><a href="">Agregar libro</a></li>
-                        <li><a href="">Editar Libro</a></li>
-                        <li><a href="">Eliminar Libro</a></li>
-                    </ul>
-                    <li><a class="nav-enlaces" href="">Libros</a></li>
-                    <li><a class="nav-enlaces" href="">informes</a> </li>
-                    <li><a class="nav-enlaces" href="">Acceso Usuario</a></li>
-                </ul>
-            </nav> 
+        <header>
+            <div class="collapse bg-dark" id="navbarHeader">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                      <h4 class="text-white">About</h4>
+                      <p class="text-muted">Este proyecto es un sistema biblioteca personal, permite gestionar prestamos, inventario y estado de libros.</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                      <h4 class="text-white">Contact</h4>
+                      <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                        <li><a href="#" class="text-white">Like on Facebook</a></li>
+                        <li><a href="#" class="text-white">Email me</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="navbar navbar-dark bg-dark shadow-sm">
+                <div class="container">
+                  <a href="#" class="navbar-brand d-flex align-items-center">
+                    <i class="fas fa-book-reader me-2"></i>
+
+                    <strong>Biblioteca Personal</strong>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+              </div>
            
-        </header>        
-        <aside>
-            <p>Barra Lateral</p>
-        </aside>       
-        <section>
-            <header>Contenido Pagina</header>          
-          <article>
-              <table>
-                  <tr>
-                      <th></th>
-                  </tr>
-              </table>
-           
-          </article>
-          <footer>Autor: Joel Guerrero</footer>
+        </header>       
+               
+        <section>                 
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <table class="table m-5">
+                      <tr>
+                          <th>id</th>
+                          <th>Nombre</th>
+                          <th>Editorial</th>
+                          <th>Autor</th>
+                          <th>Género</th>
+                          <th>Páginas</th>
+                          <th>Precio</th>
+                      </tr>
+                      <tr>
+                          <td>001</td>
+                          <td>Don Quijote de La Mancha I</td>
+                          <td>Anaya</td>
+                          <td>Miguel de Cervantes</td>
+                          <td>Caballeresco</td>
+                          <td>517</td>
+                          <td>$75.000</td>
+                      </tr>
+                      <tr>
+                        <td>002</td>
+                        <td>Don Quijote de La Mancha II</td>
+                        <td>Anaya</td>
+                        <td>Miguel de Cervantes</td>
+                        <td>Caballeresco</td>
+                        <td>611</td>
+                        <td>$95.000</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Historias de Nueva Orleans</td>
+                        <td>Alfaguara</td>
+                        <td>William Faulkner</td>
+                        <td>Novela</td>
+                        <td>186</td>
+                        <td>$65.000</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>El principito</td>
+                        <td>Andina</td>
+                        <td>Antoine Saint Exupery</td>
+                        <td>Aventura</td>
+                        <td>120</td>
+                        <td>$45.000</td>
+                    </tr>
+                  </table>
+                  </div>                                   
+                </div>
+              </div>            
+                           
         </section>
-        <footer>
-            2021 - Derechos reservados
+        <footer class="text-muted py-5">
+          <div class="container">
+            <p class="float-end mb-1">
+              <a href="#">Back to top</a>
+            </p>
+            <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+            <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+          </div>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="js/admin.js"></script>
     </body>
 </html>
 
