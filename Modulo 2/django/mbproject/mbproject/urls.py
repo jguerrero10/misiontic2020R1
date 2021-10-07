@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from loanapp.views import fecha, calculos
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('fecha/', fecha),
+    path('<int:year>/<int:year2>', calculos )
+    
+    
 ]
