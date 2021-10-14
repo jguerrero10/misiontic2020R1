@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es-CO">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Book, libro, biblioteca, library">
+        <meta name="description" content="Sistema de gestion de recursos bibliograficos"> 
+        <meta name="author" content="G165 - Misiontic 2022 Ruta 1"> 
+        <!-- Etiquetas opcionales -->        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">        
+        <title>Biblioteca | {% block titulo %}{% endblock titulo %}</title>                         
+    </head>
+    <body>        
+        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
+                <i class="fas fa-book-reader me-2"></i>
+                Biblioteca Personal
+            </a>            
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                    <div class="position-sticky pt-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'inicio' %}">                                    
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'agregar_libro' %}">                                    
+                                    Agregar
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">                                    
+                                    Editar
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">                                    
+                                    Eliminar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>    
+                </nav>
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">
+                            {% block tema %}
+                            
+                            {% endblock tema %}
+                        </h1>
+                    </div>
+                        
+                        {% block contenido %}
+                            
+                        {% endblock contenido %}
+                            
+                    
+                </main>
+            </div>
+        </div>    
+               
+        
+        <footer class="text-muted py-5">
+          <div class="container">
+            <p class="float-end mb-1">
+              <a href="#">Back to top</a>
+            </p>
+            <p class="mb-1">Copyright &copy; 2021 Misiontic Ruta 1 - Grupos 96, 165 y 185</p>
+            <p class="mb-0">Curso completo <a href="https://github.com/jguerrero10/misiontic2020R1">Link Github</a></p>
+          </div>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="js/admin.js"></script>
+    </body>
+</html>
+

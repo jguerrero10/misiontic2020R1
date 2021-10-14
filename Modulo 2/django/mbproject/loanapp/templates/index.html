@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Inicio{% endblock titulo %}
+{% block tema %}
+    Listado de Libros                            
+{% endblock tema %}
+
+{% block contenido %}
+<div class="table-responsive">
+<table class="table table-striped table-sm">
+    <tr>
+        <th>id</th>
+        <th>Nombre</th>
+        <th>Editorial</th>
+        <th>Autor</th>
+        <th>Género</th>
+        <th>Páginas</th>
+        <th>Precio</th>
+    </tr>
+    
+    {% for libro in libros %}
+        <tr>
+            <td>{{libro.id}}</td>
+            <td>{{libro.titulo}}</td>
+            <td>{{libro.editorial}}</td>
+            <td>{{libro.autor}}</td>
+            <td>{{libro.genero}}</td>
+            <td>{{libro.pag}}</td>
+            <td>${{libro.precio}}</td>
+        </tr>
+    {% endfor %}
+        
+</table> 
+</div>                           
+{% endblock contenido %}
