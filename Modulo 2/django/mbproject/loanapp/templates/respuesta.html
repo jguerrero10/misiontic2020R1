@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Libros
+{% endblock titulo %}
+
+{% block tema %}
+    Guardar - Libros                           
+{% endblock tema %}
+
+{% block contenido %}
+<h4>Libro - Guardar</h4>  
+
+
+{% if estado == True %}
+    {% include 'correcto.html' %}
+{% else %}
+    {% include 'fallo.html' %}
+{% endif %}
+    
+{% endblock contenido %}

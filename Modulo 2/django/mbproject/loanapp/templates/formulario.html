@@ -1,0 +1,56 @@
+<div class="row g-3 align-items-center">
+    <div class="col-1">
+        <label class="col-form-label" for="serial">Serial</label>
+    </div>
+    <div class="col-11">
+         <input id="serial" value="{{libro.serial}}"  name="serial" class="form-control" type="text">
+    </div> 
+    <div class="col-1">
+     <label class="col-form-label" for="titulo">titulo</label>
+ </div>
+ <div class="col-11">
+      <input id="titulo" name="titulo" value="{{libro.titulo}}" class="form-control" type="text">
+ </div>
+ <div class="col-1">
+     <label class="col-form-label" for="autor">Autor</label>
+ </div>
+ <div class="col-11">
+      <input id="autor" name="autor" value="{{libro.autor}}" class="form-control" type="text">
+ </div>
+ <div class="col-1">
+     <label class="col-form-label" for="genero">Género</label>
+ </div>
+ <div class="col-11">
+      <input id="genero" name="genero" value="{{libro.genero}}" class="form-control" type="text">
+ </div>
+ <div class="col-1">
+     <label class="col-form-label" for="editorial">Editorial</label>
+ </div>
+ <div class="col-11">      
+      <input id="editorial" value="{{libro.editorial}}" name="editorial" class="form-control" type="text">
+ </div>
+ <div class="col-1">
+     <label class="col-form-label" for="pag">Página</label>
+ </div>
+ <div class="col-11">
+      <input id="pag" name="pag" value="{{libro.pag}}" class="form-control" type="number" min="0">
+ </div>
+ <div class="col-1">
+     <label class="col-form-label" for="precio">Precio</label>
+ </div>
+ <div class="col-11">
+      <input id="precio" value="{{libro.precio}}" name="precio" class="form-control" type="number" min="0">
+ </div>
+ <div class="col-1">
+     <label class="col-form-label" for="notas">Notas</label>
+ </div>
+ <div class="col-11">
+     <textarea class="form-control" name="notas" id="notas" cols="30" rows="10">
+        {{libro.notas}}
+     </textarea>
+ </div>
+ <div class="col-4">
+     <button type="submit" class="btn-primary">Enviar Info</button>
+     <button type="reset" class="btn-danger">Restablecer</button>
+ </div>
+ </div>  

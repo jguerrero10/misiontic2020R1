@@ -16,20 +16,22 @@
         <th>Género</th>
         <th>Páginas</th>
         <th>Precio</th>
+        <th>Acción</th>
     </tr>
-    
-    {% for libro in libros %}
-        <tr>
-            <td>{{libro.id}}</td>
-            <td>{{libro.titulo}}</td>
-            <td>{{libro.editorial}}</td>
-            <td>{{libro.autor}}</td>
-            <td>{{libro.genero}}</td>
-            <td>{{libro.pag}}</td>
-            <td>${{libro.precio}}</td>
-        </tr>
-    {% endfor %}
-        
+   
+   {% for libro in libros  %}
+       <tr>
+           <td>{{libro.id}}</td>
+           <td>{{libro.titulo}}</td>
+           <td>{{libro.editorial}}</td>
+           <td>{{libro.autor}}</td>
+           <td>{{libro.genero}}</td>
+           <td>{{libro.pag}}</td>
+           <td>${{libro.precio}}</td>
+           <td><a href="{% url 'editar_libro' libro.id %}" class="btn btn-warning">Editar</a></td>
+       </tr>
+   {% endfor %}
+       
 </table> 
 </div>                           
 {% endblock contenido %}

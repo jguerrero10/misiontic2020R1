@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Libros
+{% endblock titulo %}
+
+{% block tema %}
+    Editar Libro                            
+{% endblock tema %}
+
+{% block contenido %}
+<form action="" method="post">
+    {% csrf_token %}
+    {% include 'formulario.html' %}
+</form>                     
+{% endblock contenido %}
