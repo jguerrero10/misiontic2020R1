@@ -20,6 +20,5 @@ from loanapp.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),    
     path('', home, name='inicio'),
-    path('libros/', include('loanapp.urls')),
-    
+    path('loanapp/', include('loanapp.urls')),      
 ]

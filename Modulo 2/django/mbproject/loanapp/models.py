@@ -20,7 +20,7 @@ class Libro(models.Model):
     editorial = models.CharField(max_length=60, default="N/A")
     pag = models.PositiveIntegerField()
     precio = models.FloatField()    
-    notas = models.TextField(max_length=500, default='N/A')
+    notas = models.TextField(max_length=500, default='N/A', blank=True)
 
 class Persona(models.Model):         
     nombre = models.CharField(max_length=80)    

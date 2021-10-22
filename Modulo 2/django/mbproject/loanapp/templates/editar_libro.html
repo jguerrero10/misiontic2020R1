@@ -9,7 +9,7 @@
 {% endblock tema %}
 
 {% block contenido %}
-<form action="" method="post">
+<form action="{% url 'editar_libro' libro.id %}" method="post">
     {% csrf_token %}
     {% include 'formulario.html' %}
 </form>                     

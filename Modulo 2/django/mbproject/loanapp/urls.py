@@ -2,6 +2,9 @@ from django.urls import path
 from loanapp.views import *
 
 urlpatterns  = [
-    path('agregar/', agregar_libro, name='agregar_libro'),
-    path('editar/<int:id>', editar_libro, name='editar_libro'),    
+    path('libro/agregar/', agregar_libro, name='agregar_libro'),
+    path('libro/editar/<int:id>', editar_libro, name='editar_libro'),
+    path('libro/eliminar/<int:id>', eliminar_libro, name='eliminar_libro'),
+    path('personas/', personas, name='personas'),
+    path('persona/agregar', agregar_persona, name='agregar_persona')    
 ]

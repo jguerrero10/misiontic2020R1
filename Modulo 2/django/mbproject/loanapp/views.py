@@ -2,6 +2,8 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.urls import reverse
 from loanapp.models import *
+from loanapp.forms import *
+
 
 def home(request):
     contexto = dict()
@@ -28,11 +30,12 @@ def agregar_libro(request):
                 'estado': estado,
                 'libro': libro
                 }
-        except:
+        except ValueError as e:
             estado = False
             contexto = {
                 'estado': estado,
-                'titulo': titulo
+                'titulo': titulo,
+                'error': e
                 }
         return render(request, 'respuesta.html', contexto)        
     else:    
@@ -73,7 +76,25 @@ def editar_libro(request, id):
         return render(request, 'respuesta.html', contexto) 
     else:                        
         return render(request, 'editar_libro.html', {'libro': libro})
-    
 
+def eliminar_libro(request, id):
+    libro = Libro.objects.get(id=id)
+    libro.delete()
+    return redirect(reverse('inicio'))
 
-    
+def personas(request):
+    return render(request, 'personas.html')
+
+def agregar_persona(request):    
+    if request.method == 'POST':
+        form = PersonaForm(request.POST)
+        if form.is_valid():            
+            form.save()
+            estado = "Los datos se guardaron correctamente"
+        else:
+            estado = "No fue posible guardar la Informacion"
+        return HttpResponse(estado)
+    else:
+        contexto = dict()
+        contexto['form'] = PersonaForm()        
+        return render(request, 'agregar_persona.html', contexto)
