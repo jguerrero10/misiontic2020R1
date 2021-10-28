@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Login
+{% endblock titulo %}
+
+{% block tema %}
+    Acceso                           
+{% endblock tema %}
+
+{% block contenido %}
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6>Acceder al Sitio | Login</h6>
+                </div>
+                <div class="card-body">
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
+                    
+                {% endif %}
+                    <form action="{% url 'login_user' %}" method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                          <label for="id_usuario" class="form-label">{{formLogin.usuario.label}}</label>
+                          {{formLogin.usuario}}                         
+                        </div>
+                        <div class="mb-3">
+                          <label for="id_password" class="form-label">{{formLogin.password.label}}</label>
+                          {{formLogin.password}}
+                        </div>                        
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+                     
+{% endblock contenido %}

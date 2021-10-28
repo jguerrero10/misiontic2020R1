@@ -20,5 +20,8 @@ from loanapp.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),    
     path('', home, name='inicio'),
-    path('loanapp/', include('loanapp.urls')),      
+    path('loanapp/', include('loanapp.urls')),
+    path('usuario/registrar/', registrar_usuario, name='registrar_usuario'),
+    path('usuario/login/', login_, name='login_user'),
+    path('usuario/logout/', logout_, name='logout_user')          
 ]

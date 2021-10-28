@@ -18,7 +18,25 @@
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
                 <i class="fas fa-book-reader me-2"></i>
                 Biblioteca Personal
-            </a>            
+            </a>
+            <div class="nav nav-pills" >
+               
+               {% if user.is_authenticated %}
+                  <li class="nav-item">
+                    <a href="" class="nav-link text-white">{{user.username}}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'logout_user' %}" class="nav-link text-white">Salir</a>
+                  </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'login_user' %}">Ingresar</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link text-white" href="{% url 'registrar_usuario' %}">Registrar</a>
+                 </li>
+               {% endif %}                    
+            </div>            
         </header>
         <div class="container-fluid">
             <div class="row">
@@ -34,13 +52,7 @@
                                 <a class="nav-link" href="{% url 'agregar_libro' %}">                                    
                                     Agregar
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'personas' %}">                                    
-                                    Personas
-                                </a>
-                            </li>                           
-                            
+                            </li>                                                   
                         </ul>
                     </div>    
                 </nav>
